@@ -34,7 +34,7 @@ int aa_calc_profile_hash(struct aa_profile *profile, u32 version, void *start,
 {
 	struct {
 		struct shash_desc shash;
-		char ctx[CRYPTO_MAX_SHASH_DESC_SIZE];
+		char ctx[256];
 	} desc;
 	int error = -ENOMEM;
 	u32 le32_version = cpu_to_le32(version);
